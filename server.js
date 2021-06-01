@@ -30,7 +30,7 @@ app.use(edit)
 app.use(handleEdit)
 mongoose.connect('mongodb://localhost:27017/fileUpload',{useNewUrlParser:true,useUnifiedTopology:true});
 const fileModel=require('./model/file.model');
-app.listen(port,()=>{
+app.listen(process.env.PORT || port,()=>{
     
     console.log('File Upload');
 })

@@ -1,6 +1,5 @@
 const handle = require('express').Router();
 const mongoose=require('mongoose');
-mongoose.connect('mongodb://localhost:27017/fileUpload',{useNewUrlParser:true,useUnifiedTopology:true});
 const fileModel=require('../model/file.model');
 handle.post('/handle', async (req,res)=>{
     //console.log(req.file);

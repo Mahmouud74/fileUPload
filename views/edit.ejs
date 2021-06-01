@@ -1,0 +1,18 @@
+<%- include('header.ejs') %>
+<body class="bg-secondary text-light">
+    
+    <div class="container mt-4 bg-info rounded py-2 border border-dark border-2">
+        <form action="/handleedit/<%=result[0]._id%>" method="POST" class="form-group" enctype="multipart/form-data">
+            <div class="d-flex justify-content-center my-2">
+                <input type="text" name='title' class="form-control w-50 " value=<%= result[0].title%>>
+            </div>
+            <div class="d-flex justify-content-center my-2">
+                <input type="file" name='filee' class=" overflow-hidden btn btn-dark text-light w-50" value= <%= result[0].file%> >
+            </div>
+            <div class="d-flex justify-content-center my-2">
+                <button class="btn btn-dark btn-outline-light"> ADD</button>
+            </div>
+        </form>
+    </div>
+
+<%- include('footer.ejs') %>

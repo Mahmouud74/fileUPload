@@ -28,7 +28,7 @@ app.use(home)
 app.use(deletee)
 app.use(edit)
 app.use(handleEdit)
-mongoose.connect('mongodb://localhost:27017/fileUpload',{useNewUrlParser:true,useUnifiedTopology:true});
+mongoose.connect('mongodb+srv://admin:admin@cluster0.vk4zz.mongodb.net/fileUpload',{useNewUrlParser:true,useUnifiedTopology:true});
 const fileModel=require('./model/file.model');
 app.listen(process.env.PORT || port,()=>{
     

@@ -13,13 +13,13 @@ app.use(express.urlencoded({extended:true}));
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, 'xyz')
+      cb(null, '/xyz')
     },
     filename: function (req, file, cb) {
       cb(null, Date.now()+file.originalname  )
     }
   })
-app.use(multer({dest:'xyz', storage }).single('filee'))
+app.use(multer({dest:'/xyz', storage }).single('filee'))
 app.use(express.static(path.join(__dirname,'public')));
 app.use('/xyz',express.static(path.join(__dirname,'xyz')));
 app.set('view engine','ejs');
